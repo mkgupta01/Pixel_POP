@@ -30,15 +30,20 @@ const Home = () => {
         <div>Image</div>
       </section>
 
-      <section className='bg-slate-900 h-36 flex items-center justify-evenly'>
-        {
-          highlights.map((e) => {
-            return (<div className='text-white h-4 flex flex-col justify-center items-center'>
-              <div className='lg:h-10 lg:w-10'>{e.icon}</div>
-              <span className='capitalize'>{e.title}</span>
-            </div>)
-          })
-        }
+      <section className='bg-slate-900 h-36 flex flex-col items-center justify-center'>
+        <p className='relative bottom-10 text-white uppercase text-xl'>Build Your Website</p>
+        <div className='h-fit w-full flex flex-row justify-evenly items-center'>
+          {
+            highlights.map((e) => {
+              return (
+                <div className='text-white h-4 flex flex-col justify-center items-center'>
+                  <div className='lg:h-10 lg:w-10'>{e.icon}</div>
+                  <span className='capitalize'>{e.title}</span>
+                </div>
+              )
+            })
+          }
+        </div>
       </section>
     </>
   )
